@@ -2,8 +2,7 @@
 
 ### jenkins version update
 
-
-    ```sh
+```
     // root connect
     docker exec -it -u 0 "container name" /bin/bash
     
@@ -15,4 +14,4 @@
     
     docker restart "container name"
     
-    ```
+```
