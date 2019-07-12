@@ -1,0 +1,17 @@
+version: '3'
+services:
+  jenkins:
+    image: jenkins:latest
+    container_name: jenkins
+    volumes:
+      - ./jenkins-log:/var/log/jenkins
+      - ./jenkins-data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8081:8080"
+    environment:
+      JENKINS_HOST_HOME: "/data/jenkins"
+#    networks:
+#      - jenkins-net
+#networks:
+#jenkins-net:
